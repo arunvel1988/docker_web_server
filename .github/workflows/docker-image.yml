@@ -19,7 +19,7 @@ jobs:
         docker build . --file Dockerfile --tag arunvel1988/github:latest
         echo $USER
         echo $PASS
-        docker login -u $USER --password-stdin Ssjcoe123@#
+        docker login -u arunvel1988 -p Ssjcoe123@#
         
         docker push arunvel1988/github:latest
       
