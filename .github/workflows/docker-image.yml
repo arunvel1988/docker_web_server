@@ -17,6 +17,6 @@ jobs:
     - name: Build the Docker image
       run: | 
         docker build . --file Dockerfile --tag arunvel1988/github:latest
-        docker login -u arunvel1988 -p Ssjcoe123@#     
+        docker login -u $USER -p $PASS     
         docker push arunvel1988/github:latest
       
