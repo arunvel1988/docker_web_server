@@ -15,13 +15,14 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: | 
+      env:
+        USER: ${{ secrets.USER }}
+        PASS: ${{ secrets.PASS }}
+      run: |         
         echo $USER
         echo $PASS
         docker build . --file Dockerfile --tag arunvel1988/github:latest
-        echo $USER
-        echo $PASS
-        docker login -u arunvel1988 -p Ssjcoe123@#
+        docker login -u $USER -p $PASS
         
         docker push arunvel1988/github:latest
       
