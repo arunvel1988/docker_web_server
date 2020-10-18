@@ -16,7 +16,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: | 
-        docker build . --file Dockerfile --tag arunvel1988:$(date +%s) 
+        docker build . --file Dockerfile --tag arunvel1988/github:latest
         docker login -u arunvel1988 -p Ssjcoe123@#     
-        docker push arunvel1988:$(date +%s)
+        docker push arunvel1988/github:latest
       
