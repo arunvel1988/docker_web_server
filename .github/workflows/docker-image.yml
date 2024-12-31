@@ -29,6 +29,6 @@ jobs:
         cat /etc/os-release
         sudo snap install ngrok
         docker run -d --name duasp -p "$PORT:$PORT" arunvel1988/duasp-ci-demo-2025:latest
-        ngrok port 8000
+        ngrok http 8000
         
  
