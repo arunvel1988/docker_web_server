@@ -30,6 +30,6 @@ jobs:
         sudo snap install ngrok
         docker run -d --name duasp -p "$PORT:$PORT" arunvel1988/duasp-ci-demo-2025:latest
         sudo ngrok config add-authtoken 1Sq8nUiBW6PmjrJLTF1RWJbzHkY_LndRpPp2iTA1sjQNbNhG
-        ngrok http 8000
+        sudo ngrok http 8000
         
  
