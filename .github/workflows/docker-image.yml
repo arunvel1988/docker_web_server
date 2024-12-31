@@ -21,8 +21,10 @@ jobs:
       run: |         
         echo $USER
         echo $PASS
-        docker build . --file Dockerfile --tag arunvel1988/hpcap-ci-demo:latest
+        docker build . --file Dockerfile --tag arunvel1988/duasp-ci-demo-2025:latest
         docker login -u $USER -p $PASS
         
-        docker push arunvel1988/hpcap-ci-demo:latest
-      
+        docker push arunvel1988/duasp-ci-demo-2025:latest
+        cat /etc/os-release
+        
+ 
