@@ -18,6 +18,7 @@ jobs:
       env:
         USER: ${{ secrets.USER }}
         PASS: ${{ secrets.PASS }}
+        PORT: 8000
       run: |         
         echo $USER
         echo $PASS
@@ -27,5 +28,7 @@ jobs:
         docker push arunvel1988/duasp-ci-demo-2025:latest
         cat /etc/os-release
         sudo snap install ngrok
+        docker run -d --name "$APP_NAME" -p "$PORT:$PORT" "$DOCKER_REGISTRY/$APP_NAME:$IMAGE_TAG"
+        ngrok port 8000
         
  
