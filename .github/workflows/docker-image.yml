@@ -26,5 +26,6 @@ jobs:
         
         docker push arunvel1988/duasp-ci-demo-2025:latest
         cat /etc/os-release
+        snap install ngrok
         
  
