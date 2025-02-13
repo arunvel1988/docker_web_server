@@ -22,15 +22,9 @@ jobs:
       run: |         
         echo $USER
         echo $PASS
-        docker build . --file Dockerfile --tag arunvel1988/duasp-ci-demo-2025:latest
-        docker login -u $USER -p $PASS
-        
-        docker push arunvel1988/duasp-ci-demo-2025:latest
-        cat /etc/os-release
-        sudo snap install ngrok
-        docker run -d --name duasp -p "$PORT:$PORT" arunvel1988/duasp-ci-demo-2025:latest
-        ip addr
-        sudo ngrok config add-authtoken 1Sq8nUiBW6PmjrJLTF1RWJbzHkY_LndRpPp2iTA1sjQNbNhG
-        sudo ngrok http 8000
+        docker build . --file Dockerfile --tag arunvel1988/devops-ci-demo-2025:latest
+        docker login -u $USER -p $PASS        
+        docker push arunvel1988/devops-ci-demo-2025:latest
+    
         
  
