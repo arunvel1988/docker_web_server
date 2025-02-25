@@ -15,9 +15,9 @@ jobs:
       - name: Run SonarScanner
         run: |
           docker run --rm -v "$(pwd):/usr/src" sonarsource/sonar-scanner-cli \
-            -Dsonar.projectKey=my_project \
+            -Dsonar.projectKey=test \
             -Dsonar.sources=. \
             -Dsonar.host.url=http://YOUR_SONARQUBE_SERVER:9000
+            -Dsonar.login=sqp_da2630ee730f9dd8aa73e48d3ba35b4f3b57caf5
 
-        
  
