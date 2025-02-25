@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  sonar:
+  sonar_scanning:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -24,8 +24,8 @@ jobs:
       - name: SonarQube Quality Gate Check
         id: sonar_quality_gate
         run: |
-          STATUS=$(curl -s -u sqp_da2630ee730f9dd8aa73e48d3ba35b4f3b57caf5: \
-          "http://13.232.4.242:9000/api/qualitygates/project_status?projectKey=test" \
+          STATUS=$(curl -s -u sqp_c8a81e3986d26128808afddc3dd0f90f7449fef5: \
+          "http://13.232.4.242:9091/api/qualitygates/project_status?projectKey=devsecops" \
           | jq -r '.projectStatus.status')
 
           echo "Quality Gate Status: $STATUS"
@@ -34,8 +34,8 @@ jobs:
             exit 1
           fi
 
-  docker:
-    needs: sonar
+  docker_image_scanning:
+    needs: sonar_scanning
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
