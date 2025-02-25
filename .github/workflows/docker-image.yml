@@ -2,9 +2,9 @@ name: CI/CD Pipeline with SonarQube & Docker Security Scan
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   sonar:
