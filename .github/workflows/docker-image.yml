@@ -16,10 +16,10 @@ jobs:
       - name: Run SonarScanner
         run: |
           docker run --rm -v "$(pwd):/usr/src" sonarsource/sonar-scanner-cli \
-            -Dsonar.projectKey=test \
+            -Dsonar.projectKey=devsecops \
             -Dsonar.sources=. \
-            -Dsonar.host.url=http://13.232.4.242:9000 \
-            -Dsonar.login=sqp_da2630ee730f9dd8aa73e48d3ba35b4f3b57caf5
+            -Dsonar.host.url=http://13.232.4.242:9091 \
+            -Dsonar.login=sqp_c8a81e3986d26128808afddc3dd0f90f7449fef5
 
       - name: SonarQube Quality Gate Check
         id: sonar_quality_gate
